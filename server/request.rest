@@ -1,0 +1,48 @@
+### Create a new post with author and category names
+POST http://localhost:5000/posts
+Content-Type: application/json
+
+{
+    "title": "My 3rd programing blog",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo laboriosam nisi fugiat, maxime officia labore voluptatem, accusamus illo sapiente quo, aliquam iure! Magnam fugiat dolor ab excepturi eaque perspiciatis! Laboriosam labore molestiae necessitatibus reprehenderit modi vero sequi possimus pariatur odio ratione adipisci fuga ad, doloremque quam. Earum laborum dicta eveniet praesentium? Ipsa accusamus, soluta incidunt deserunt quisquam perferendis fuga eos vero pariatur in earum nihil id adipisci minus neque accusantium necessitatibus architecto, quo maxime expedita consequuntur exercitationem. Atque, et? Ullam perferendis cumque qui, ad veritatis quasi. Sunt maiores eaque nulla quod perferendis magnam odit dolor architecto qui quam nobis eos cumque at voluptate laborum illo amet animi neque fugiat, eius magni? Debitis nesciunt accusantium magni culpa nulla esse nobis voluptate harum error aliquid! Architecto perferendis a hic, excepturi rem pariatur veritatis, illum, fuga quam saepe quisquam earum enim quasi sit asperiores nihil? Quis debitis animi quam tempora nulla, ea ducimus dignissimos unde voluptate, doloremque temporibus, earum error consectetur excepturi fuga natus laudantium magni aspernatur qui placeat! Aperiam consequatur fugiat, rem amet iste quidem laudantium nemo vero aut tempora accusamus error maxime tempore ducimus, eveniet explicabo assumenda qui quod nobis! Ad, obcaecati asperiores. Aliquam tempore nobis sunt. Odio ipsa dolores consequuntur?.",
+    "author": {
+  "_id": "66a85701da54d20401be6950",
+    "name": "jhon doe"
+},
+    "category": {
+  "_id": "66a857f8da54d20401be6955",
+    "name": "programing"
+}
+}
+
+###
+GET http://localhost:5000/posts
+
+###
+POST http://localhost:5000/authors
+Content-Type: application/json
+
+{
+    "name": "raka firdaus"
+}
+
+### get author
+GET http://localhost:5000/authors
+
+### create category
+POST http://localhost:5000/categories
+Content-Type: application/json
+
+{
+    "name": "personal"
+}
+
+### get categories
+GET http://localhost:5000/categories
+
+### get post berdasarkan kategory
+GET http://localhost:5000/posts/category/66a85865da54d20401be6959
+
+### get post berdasarkan author
+GET http://localhost:5000/posts/author/66a85701da54d20401be6950
+
